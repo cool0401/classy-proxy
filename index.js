@@ -43,8 +43,8 @@ app.get('/', (req, res) => {
 
 
 function getVideo(responseData, id, index, res) {
-  console.log(responseData[index][1].uri);
-  var TARGET_URL = `${responseData[index][1].uri}/latest_version?id=${id}&itag=22`;
+  console.log(responseData[index][2].uri);
+  var TARGET_URL = `${responseData[index][2].uri}/latest_version?id=${id}&itag=22`;
   axios({
     method: 'get',
     url: TARGET_URL,
